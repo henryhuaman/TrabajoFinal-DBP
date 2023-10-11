@@ -1,0 +1,91 @@
+﻿@model IEnumerable<PagPrincipal.Models.TbCurso>
+<html>  
+    
+<body class="flex min-h-screen flex-col items-center justify-between p-24 gap-6 w-full bg-gradient-to-r from-cyan-800 from-30% via-cyan-800 via-50% to-cyan-950 to-80%">
+    <!--  ........ ...........-->
+        
+        <section class="flex flex-col items-center m-10">
+            <div>
+            <h1 id="cursos" class="text-center text-6xl font-bold p-14">CURSOS</h1>
+            </div>
+        <div class="gap-10 flex items-stretch">
+            <div class=" grid gap-x-8 gap-y-4 grid-cols-4 ">
+                @foreach (var curs in Model)
+                {
+                    <div class="drop-shadow-xl box-border h-full w-96 p-4 bg-gradient-to-r from-indigo-500 from-30% via-indigo-600 via-50% to-indigo-800 to-80% rounded-lg">
+                        <img src="https://static.mercadonegro.pe/wp-content/uploads/2021/02/23133540/curso-on-line.png" alt="Imagen 1" class="rounded-lg inline-block"></img>
+                        <h3 class="text-2xl font-bold text-center">@curs.NomCur</h3>
+                                <h3 class="text-xl text-center">@curs.CateCur</h3>
+                                <h4 class="text-center">@curs.TamCur</h4>
+                    </div>
+                }
+            </div>
+            </div>
+        </section>
+        
+        <section class="flex flex-col items-center m-10">
+        <div><h1 id="profesores" class="text-center text-6xl font-bold p-14">PROFESORES</h1></div>
+            <div class="grid grid-cols-4">
+                <div class="box-border h-full w-96 p-4 border-4 bg-gray-300">
+                <img src="https://i.pinimg.com/474x/ed/35/f9/ed35f9b6a467ac968e08b58e12d8e2cc.jpg" alt="Imagen 1" class="rounded-full inline-block"></img>
+                    <h3></h3>
+                    <h3>Matematicas</h3>
+                    <h4>300gb</h4>
+                </div>
+                <div class="box-border h-full w-96 p-4 border-4 bg-gray-300">
+                <img src="https://i.pinimg.com/474x/ed/35/f9/ed35f9b6a467ac968e08b58e12d8e2cc.jpg" alt="Imagen 1" class="rounded-full inline-block"></img>
+                    <h3></h3>
+                    <h3>Matematicas</h3>
+                    <h4>300gb</h4>
+                </div>
+                <div class="box-border h-full w-96 p-4 border-4 bg-gray-300">
+                <img src="https://i.pinimg.com/474x/ed/35/f9/ed35f9b6a467ac968e08b58e12d8e2cc.jpg" alt="Imagen 1" class="rounded-full inline-block"></img>
+                    <h3></h3>
+                    <h3>Matematicas</h3>
+                    <h4>300gb</h4>
+                </div>
+                <div class="box-border h-full w-96 p-4 border-4 bg-gray-300">
+                <img src="https://i.pinimg.com/474x/ed/35/f9/ed35f9b6a467ac968e08b58e12d8e2cc.jpg" alt="Imagen 1" class="rounded-full inline-block"></img>
+                    <h3></h3>
+                    <h3>Matematicas</h3>
+                    <h4>300gb</h4>
+                </div>
+            </div>
+        </section>
+
+    <section class="flex flex-col items-center m-10">
+        <div><h1 id="planes" class="text-center text-6xl font-bold p-14">Planes</h1></div>
+        <div class="gap-10 flex items-stretch">
+            <div className='w-96 h-auto bg-slate-300 rounded-lg'>
+                <div className=''>
+                    <img href="/planes/plan1" src="https://res.cloudinary.com/practicaldev/image/fetch/s--hm2CKzCr--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/968idkl9ry6plny90y63.png" alt=image2 className='rounded-t-lg' />
+                </div>
+                <div className='p-2 flex flex-col justify-end'>
+                    <div>
+                        <h1 className='text-center'>Membresia Normal</h1>
+                        <h2>descripcion</h2>
+                        <h2>100</h2>
+                    </div>
+                    <Button text=Adquirir></Button>
+                </div>
+            </div>
+            <div className='w-96 h-auto bg-slate-300 rounded-lg'>
+                <div className=''>
+                    <img href="/planes/plan1" src="https://res.cloudinary.com/practicaldev/image/fetch/s--hm2CKzCr--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/968idkl9ry6plny90y63.png" alt=image2 className='rounded-t-lg' />
+                </div>
+                <div className='rounded-b-lg bg-white p-2 flex flex-col justify-end'>
+                    <div class="bg-white rounded-b-lg">
+                        <h1 className='text-center'>Membresia Normal</h1>
+                        <h2>descripcion</h2>
+                        <h2>100</h2>
+                        <Button text=Adquirir>adquirir</Button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+    <h1 className='text-center'>Membresia Normal</h1>
+    <!--  ..................................-->
+
+    </body>
+</html>

@@ -1,0 +1,49 @@
+﻿@model PagPrincipal.Models.TbCurso
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<html>
+<head>
+    <title>Editar Detalles del Curso</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-md w-96">
+        <h1 class="text-2xl font-semibold mb-4">Editar Detalles del Curso</h1>
+        <form asp-controller="Curso" asp-action="EditDetails" method="post">
+            <div class="mb-4">
+                <input asp-for="CodCur" type="hidden">
+            </div>
+            <div class="mb-4">
+                <label for="NomCur" class="block font-semibold">Nombre del curso</label>
+                <input asp-for="NomCur" id="NomCur" placeholder="Nombre del curso"
+                       class="w-full p-2 border border-gray-300 rounded-md focus:ring focus:ring-indigo-400">
+                <span asp-validation-for="NomCur" class="text-red-600"></span>
+            </div>
+            <div class="mb-4">
+                <label for="CateCur" class="block font-semibold">Categoría</label>
+                <input asp-for="CateCur" id="CateCur" placeholder="Categoría del curso"
+                       class="w-full p-2 border border-gray-300 rounded-md focus:ring focus:ring-indigo-400">
+                <span asp-validation-for="CateCur" class="text-red-600"></span>
+            </div>
+            <div class="mb-4">
+                <label for="TamCur" class="block font-semibold">Tamaño</label>
+                <input asp-for="TamCur" id="TamCur" placeholder="Tamaño del curso"
+                       class="w-full p-2 border border-gray-300 rounded-md focus:ring focus:ring-indigo-400">
+                <span asp-validation-for="TamCur" class="text-red-600"></span>
+            </div>
+            <div class="text-center">
+                <button type="submit"
+                        class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-400"
+                        name="grabar">
+                    Modificar
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

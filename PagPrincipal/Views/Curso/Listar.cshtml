@@ -1,0 +1,57 @@
+﻿@model IEnumerable<PagPrincipal.Models.TbCurso>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300">
+    <div class="container mx-auto p-4 bg-white">
+        <h1>Listado de Cursos registrados</h1>
+        <h2>
+            Buscar<input id="myInput" type="text" placeholder="Search..." />
+            <br />
+        </h2>
+        <table class="w-full border-collapse border border-gray-300">
+            <thead>
+                <tr>
+                    <th class="p-3 bg-yellow-300 text-left">Codigo</th>
+                    <th class="p-3 bg-yellow-300 text-left">Nombre del curso</th>
+                    <th class="p-3 bg-yellow-300 text-left">Categoria</th>
+                    <th class="p-3 bg-yellow-300 text-left">Tamaño</th>
+                    <th class="p-3 bg-yellow-300 text-left">Editar</th>
+                    <th class="p-3 bg-yellow-300 text-left">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                @foreach (var item in Model)
+                {
+                    <tr class="hover:bg-gray-200">
+                        <td class="p-3 border border-gray-300">@item.CodCur</td>
+                        <td class="p-3 border border-gray-300">@item.NomCur</td>
+                        <td class="p-3 border border-gray-300">@item.CateCur</td>
+                        <td class="p-3 border border-gray-300">@item.TamCur</td>
+                        <td class="p-3 border border-gray-300"><a href="@Url.Action("Edit", new { id = item.CodCur })" class="text-blue-500 hover:underline">Editar</a></td>
+                        <td class="p-3 border border-gray-300"><a href="@Url.Action("Delete", new { id = item.CodCur })" class="text-red-500 hover:underline">Eliminar</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>

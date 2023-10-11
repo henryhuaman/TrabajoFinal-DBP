@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PagPrincipal</title>
+    <!--- <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="~/css/estilos.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PagPrincipal.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Curso.style.css" asp-append-version="true" />
+   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body class="max-w-screen ">
+    <header>
+        <nav class="bg-gradient-to-r from-sky-800 from-30% via-sky-800 via-50% to-sky-950 to-80% shadow-2xl mb-3 p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                
+                <div class="flex space-x-4 flex items-center">
+                    <!-- Logo o Título -->
+                    <div class="logo">
+                        <a asp-area="" asp-controller="Pagina" asp-action="Index">HomeCurse</a>
+                    </div>
+
+                    <!-- Menú de Navegación -->
+                    <div class="flex space-x-8">
+                        <ul class="text-2xl" style="font-family: fantasy">
+                            <a class="px-2" key:"Cursos" href="#cursos">Cursos</a>
+                            <a class="px-2" key:"Profesores" href="#profesores">Profesores</a>
+                            <a class="px-2" key:"clases en vivo" href="#planes">Planes</a>
+                            <a class="px-2" key:"Contactos" href="/contactos">Contactos</a>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 class="space-x-8 text-2xl">
+                    Buscar<input class="text-2xl bg-transparent cursor-pointer p-2 rounded-full w-80 h-16 border border-gray-300" id="" type="text" placeholder="Busqueda..." />
+                    <br />
+                </h2>
+
+
+                <div class="text-2xl flex items-center space-x-4" style="font-family: fantasy">
+                    <ul >
+                        <a class="px-2" href="">Registrate</a>
+                        <a class="px-2" href="">Iniciar Sesion</a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+
+
+    <!-- Pie de Página -->
+    <footer class="flex text-center py-4 fixed bottom-0 w-full text-white justify-between bg-slate-700">
+        <div>
+            &copy; 2023 - Honda - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+        <div class="flex top-0 right-0 top-0">
+            <a href="/Usuario/Index/" class="transition delay-150 duration-300 ease-in-out flex flex-col"><img alt="Icono" class="button-icon w-10 h-10" src="https://cdn-icons-png.flaticon.com/512/56/56763.png"></img></a>
+        </div>
+        
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
+
+.logo {
+    font: oblique bold 120% cursive;
+    text-decoration: none;
+    font-size: 60px;
+}
+
+html, body {
+    height: 100%;
+}
+
+.images-container {
+    width: 800px; /* Ancho suficiente para mostrar todas las imágenes sin desplazamiento */
+}
+
+.button-with-icon {
+    display: flex;
+    align-items: center;
+}
+
+.button-icon {
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+/* *************************/
+
+
