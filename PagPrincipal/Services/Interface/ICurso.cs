@@ -4,7 +4,7 @@ namespace PagPrincipal.Services.Interface
 {
     public interface ICurso
     {
-        //IEnumerable<TbCurso> GetAllCurso();
+        IEnumerable<TbCurso> GetAllCurso();
         void Add(TbCurso curso);
         void Update(TbCurso curso);
         void Delete(string id);
