@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using PagPrincipal.Models;
 using PagPrincipal.Services.Repository;
+using System.Collections;
 
 namespace PagPrincipal.Controllers
 {
@@ -9,6 +11,19 @@ namespace PagPrincipal.Controllers
         private CursoRepository obj = new CursoRepository();
         public IActionResult Index()
         {
+            var opciones = new List<SelectListItem>
+        {
+            new SelectListItem { Value = "1", Text = "Opción 1" },
+            new SelectListItem { Value = "2", Text = "Opción 2" },
+            new SelectListItem { Value = "3", Text = "Opción 3" }
+        };
+
+            // Crear un SelectList
+            SelectList selectList = new SelectList(opciones, "Value", "Text");
+
+            ViewBag.Opciones = selectList;
+
+            ViewBag.Categorias = obj.GetCategorias();
             return View(obj.GetAllCurso());
         }
     }

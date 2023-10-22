@@ -5,7 +5,7 @@ namespace PagPrincipal.Services.Repository
 {
     public class CursoRepository : ICurso
     {
-        private BdCursos bd = new BdCursos();
+        private BdWeb bd = new BdWeb();
 
         public void Add(TbCurso curso)
         {
@@ -34,6 +34,15 @@ namespace PagPrincipal.Services.Repository
             return bd.TbCursos;
         }
 
+        public List<TbCurso> GetCursoPorCategoria(string categoria)
+        {
+            var obj = (from tcurso in bd.TbCursos
+                       where tcurso.CateCur == categoria
+                       select tcurso).ToList();
+            return obj;
+        }
+
+
         public TbCurso GetCurso(string id)
         {
             var obj = (from tcurso in bd.TbCursos
@@ -53,10 +62,15 @@ namespace PagPrincipal.Services.Repository
                 objModificado.CodCur = cursoConDatosModificados.CodCur;
                 objModificado.NomCur = cursoConDatosModificados.NomCur;
                 objModificado.CateCur = cursoConDatosModificados.CateCur;
-                objModificado.TamCur = cursoConDatosModificados.TamCur;
 
                 bd.SaveChanges();
             }
+        }
+
+        public List<string> GetCategorias()
+        {
+            var categorias = bd.TbCursos.Select(alumno => alumno.CateCur).Distinct().ToList();
+            return categorias;
         }
     }
 }

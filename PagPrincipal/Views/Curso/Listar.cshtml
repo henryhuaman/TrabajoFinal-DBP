@@ -23,7 +23,7 @@
                     <th class="p-3 bg-yellow-300 text-left">Codigo</th>
                     <th class="p-3 bg-yellow-300 text-left">Nombre del curso</th>
                     <th class="p-3 bg-yellow-300 text-left">Categoria</th>
-                    <th class="p-3 bg-yellow-300 text-left">Tamaño</th>
+                    <th class="p-3 bg-yellow-300 text-left">Precio</th>
                     <th class="p-3 bg-yellow-300 text-left">Editar</th>
                     <th class="p-3 bg-yellow-300 text-left">Eliminar</th>
                 </tr>
@@ -35,7 +35,7 @@
                         <td class="p-3 border border-gray-300">@item.CodCur</td>
                         <td class="p-3 border border-gray-300">@item.NomCur</td>
                         <td class="p-3 border border-gray-300">@item.CateCur</td>
-                        <td class="p-3 border border-gray-300">@item.TamCur</td>
+                        <td class="p-3 border border-gray-300">@item.PreCur</td>
                         <td class="p-3 border border-gray-300"><a href="@Url.Action("Edit", new { id = item.CodCur })" class="text-blue-500 hover:underline">Editar</a></td>
                         <td class="p-3 border border-gray-300"><a href="@Url.Action("Delete", new { id = item.CodCur })" class="text-red-500 hover:underline">Eliminar</a></td>
                     </tr>

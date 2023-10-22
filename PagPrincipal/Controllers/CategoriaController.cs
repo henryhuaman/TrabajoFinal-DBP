@@ -3,14 +3,15 @@ using PagPrincipal.Services.Repository;
 
 namespace PagPrincipal.Controllers
 {
-    public class UsuarioController : Controller
+    public class CategoriaController : Controller
     {
         private CursoRepository obj = new CursoRepository();
-        public IActionResult Index()
+        public IActionResult Index(string id)
         {
+
             ViewBag.Categorias = obj.GetCategorias();
-            ViewBag.Cursos= obj.GetAllCurso();
-            return View();
+            ViewData["Categoria"]=id;
+            return View(obj.GetCursoPorCategoria(id));
         }
     }
 }
