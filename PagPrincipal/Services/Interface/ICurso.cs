@@ -8,8 +8,7 @@ namespace PagPrincipal.Services.Interface
         void Add(TbCurso curso);
         void Update(TbCurso curso);
         void Delete(string id);
-
         TbCurso GetCurso(string id);
-
+        List<string> GetCategorias();
     }
 }

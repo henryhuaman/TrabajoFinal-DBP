@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.Add(new ServiceDescriptor(typeof(ICurso), new CursoRepository()));
-
+builder.Services.Add(new ServiceDescriptor(typeof(IProfesores), new ProfesoresRepository()));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

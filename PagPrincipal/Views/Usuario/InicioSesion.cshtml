@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/InicioSesion.css"/>
+</head>
+<body>
+    <div class="container_Inciosesion">
+        <form class="form-signin_Inciosesion" action="/Usuario/Verification" method="post">
+            <h2 class="form-signin-heading_Inciosesion">INICIO DE SESION</h2>
+            <label for="inputEmail" class="sr-only">Correo electronico:</label>
+            <input type="text" class="form-control_Inciosesion" name="email" placeholder="Username" id="email" />
+            <span class="text-danger"></span>
+            <label for="inputPassword" class="sr-only">Contraseña:</label>
+            <input type="password" class="form-control_Inciosesion" name="password" placeholder="Password" id="password" />
+            <span class="text-danger"></span>
+            <button class="Ingresar_Iniciosesion"type="submit">
+                <span aria-hidden="true"></span> INGRESAR
+            </button>
+        </form>
+    </div>
+    <div>
+        <button class="button-return_Inciosesion" type="button" onclick="window.location.href='/Pagina/Index'">
+            <img src="/images/regresar.png" alt="Regresar">
+        </button>
+    </div>
+</body>
+</html>

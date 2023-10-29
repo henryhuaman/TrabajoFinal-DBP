@@ -13,7 +13,7 @@ public partial class TbVentum
 
     public DateTime FechaCompra { get; set; }
 
-    public decimal? Total { get; set; }
+    public decimal Total { get; set; }
 
     public virtual TbCliente CodCliNavigation { get; set; } = null!;
 

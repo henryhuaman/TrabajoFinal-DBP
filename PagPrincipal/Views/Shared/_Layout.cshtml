@@ -1,5 +1,5 @@
 ﻿@{
-    var model = ViewBag.Categorias as List<string>;
+    var model1 = ViewBag.Categorias as List<string>;
 }
 <!DOCTYPE html>
 <html lang="es">
@@ -42,7 +42,7 @@
                                     <ul class="z-10 w-52 text-white absolute hidden group-hover:block list-none bg-black bg-opacity-50 p-2 rounded-lg">
                                     
                                         
-                                        @foreach (var item in model)
+                                        @foreach (var item in model1)
                                         { 
                                             <li class="hover:bg-black">
                                                 <a asp-controller="Categoria" asp-action="Index" asp-route-id="@item" class="block text-white py-2 ">@item</a>
@@ -68,7 +68,7 @@
                 <div class="text-2xl flex items-center" style="font-family: fantasy">
                     <ul class="flex space-x-8">
                         <li class="transform hover:scale-125 transition duration-300"><a class="hover:text-yellow-400 transition duration-500" href="">Registrate</a></li>
-                        <li class="transform hover:scale-125 transition duration-300"><a class="hover:text-yellow-400 transition duration-500" href="">Iniciar Sesion</a></li>
+                        <li class="transform hover:scale-125 transition duration-300"><a class="hover:text-yellow-400 transition duration-500" href="/Usuario/InicioSesion">Iniciar Sesion</a></li>
                     </ul>
                 </div>
             </ul>

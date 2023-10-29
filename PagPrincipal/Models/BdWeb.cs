@@ -25,13 +25,13 @@ public partial class BdWeb : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=HENRY;Initial Catalog=WEB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-R4NBDCR\\SQLEXPRESS01;Initial Catalog=WEB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<TbCliente>(entity =>
         {
-            entity.HasKey(e => e.CodCli).HasName("PK__TB_CLIEN__050CCFE5D545ACC9");
+            entity.HasKey(e => e.CodCli).HasName("PK__TB_CLIEN__050CCFE5251E6DFE");
 
             entity.ToTable("TB_CLIENTE");
 
@@ -64,7 +64,7 @@ public partial class BdWeb : DbContext
 
         modelBuilder.Entity<TbCurso>(entity =>
         {
-            entity.HasKey(e => e.CodCur).HasName("PK__TB_CURSO__050C04CBAC84CAD1");
+            entity.HasKey(e => e.CodCur).HasName("PK__TB_CURSO__050C04CB88AFD2CD");
 
             entity.ToTable("TB_CURSOS");
 
@@ -97,12 +97,12 @@ public partial class BdWeb : DbContext
             entity.HasOne(d => d.CodProNavigation).WithMany(p => p.TbCursos)
                 .HasForeignKey(d => d.CodPro)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__TB_CURSOS__Cod_P__4316F928");
+                .HasConstraintName("FK__TB_CURSOS__Cod_P__5070F446");
         });
 
         modelBuilder.Entity<TbProfesore>(entity =>
         {
-            entity.HasKey(e => e.CodPro).HasName("PK__TB_PROFE__02A11BC55923B7F8");
+            entity.HasKey(e => e.CodPro).HasName("PK__TB_PROFE__02A11BC502DF85A1");
 
             entity.ToTable("TB_PROFESORES");
 
@@ -139,7 +139,7 @@ public partial class BdWeb : DbContext
 
         modelBuilder.Entity<TbVentum>(entity =>
         {
-            entity.HasKey(e => e.CodCompra).HasName("PK__TB_Venta__D178AF590AA86DAA");
+            entity.HasKey(e => e.CodCompra).HasName("PK__TB_Venta__D178AF596227F1FD");
 
             entity.ToTable("TB_Venta");
 
@@ -164,12 +164,12 @@ public partial class BdWeb : DbContext
             entity.HasOne(d => d.CodCliNavigation).WithMany(p => p.TbVenta)
                 .HasForeignKey(d => d.CodCli)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__TB_Venta__Cod_Cl__46E78A0C");
+                .HasConstraintName("FK__TB_Venta__Cod_Cl__534D60F1");
 
             entity.HasOne(d => d.CodCurNavigation).WithMany(p => p.TbVenta)
                 .HasForeignKey(d => d.CodCur)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__TB_Venta__Cod_Cu__47DBAE45");
+                .HasConstraintName("FK__TB_Venta__Cod_Cu__5441852A");
         });
 
         OnModelCreatingPartial(modelBuilder);
