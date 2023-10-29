@@ -9,5 +9,7 @@ namespace PagPrincipal.Services.Interface
         TbCliente getClientebyName(string name);
         TbCliente getClientebyDNI(string dni);
         TbCliente getClientebyCorreo(string correo);
+        bool ClienteExistsbyCorreo(string correo);
+        bool passwordMatchvyEmail(string correo, string password);
     }
 }

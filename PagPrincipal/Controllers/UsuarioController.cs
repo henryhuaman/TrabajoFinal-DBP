@@ -9,9 +9,11 @@ namespace PagPrincipal.Controllers
     {
         private CursoRepository obj = new CursoRepository();
         private readonly IProfesores Profe;
-        public UsuarioController (IProfesores pro)
+        private readonly ICliente client; 
+        public UsuarioController (IProfesores pro, ICliente cle)
         {
             this.Profe = pro;
+            this.client = cle;
         }
         public IActionResult Index()
         {
@@ -46,6 +48,16 @@ namespace PagPrincipal.Controllers
                 else
                 {
                     return RedirectToAction("InicioSesion", "Usuario");
+                }
+            } else if (client.ClienteExistsbyCorreo(email))
+            {
+                if (client.passwordMatchvyEmail(email, password))
+                {
+                    return RedirectToAction("Index","Cliente");
+                }
+                else
+                {
+                    return RedirectToAction("InicioSesion","Usuario");
                 }
             }
             else

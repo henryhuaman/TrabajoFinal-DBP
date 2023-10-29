@@ -8,12 +8,12 @@ namespace PagPrincipal.Services.Repository
         private BdWeb database = new BdWeb();
         public IEnumerable<TbProfesore> getAllProfesores()
         {
-            throw new NotImplementedException();
+            return database.TbProfesores;
         }
 
         public TbProfesore getProfesorbyCod(string cod)
         {
-            throw new NotImplementedException();
+            return (from matching in database.TbProfesores where matching.CodPro == cod select matching).Single();
         }
 
         public TbProfesore getProfesorbyCorreo(string correo)
@@ -23,12 +23,12 @@ namespace PagPrincipal.Services.Repository
 
         public TbProfesore getProfesorbyDNI(string dni)
         {
-            throw new NotImplementedException();
+            return (from matching in database.TbProfesores where matching.DniPro == dni select matching).Single(); ;
         }
 
         public TbProfesore getProfesorbyName(string name)
         {
-            throw new NotImplementedException();
+            return (from matching in database.TbProfesores where matching.NomPro == name select matching).Single();
         }
 
         public bool passwordMatchvyEmail(string correo, string password)
