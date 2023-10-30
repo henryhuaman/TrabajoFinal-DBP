@@ -10,5 +10,6 @@ namespace PagPrincipal.Services.Interface
         void Delete(string id);
         TbCurso GetCurso(string id);
         List<string> GetCategorias();
+        IEnumerable<TbCurso> GetCursosbyProfe(TbProfesore profe);
     }
 }

@@ -2,23 +2,21 @@
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@{
-}
 <html>
-    <head>
-    <link rel="stylesheet" type="text/css" href="/css/ProfesoresInterfaz.css"/>
-    </head>
-    <body>
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/ProfesoresInterfaz.css" />
+</head>
+<body>
     <div class="Items_Index">
-        <button class="Index_Item" type="button">PERFIL</button>
-        <button class="Index_Item" type="button" onclick="window.location.href='/Profesores/Index_Curso'">CURSOS</button>
-        <button class="Index_Item" type="button">CERRAR SESION</button>
+        <button class="Index_Item">PERFIL</button>
+        <button class="Index_Item">CURSOS</button>
+        <button class="Index_Item">CERRAR SESION</button>
     </div>
     <table>
         <thead>
-        <td scope="col">Codigo</td>
-        <td scope="col">Nombre</td>
-        <td scope="col">Categoria</td>
+            <td scope="col">Codigo</td>
+            <td scope="col">Nombre</td>
+            <td scope="col">Categoria</td>
         </thead>
         <tbody>
             @foreach (var itm in Model.cursodePROFE)
@@ -31,5 +29,5 @@
             }
         </tbody>
     </table>
-    </body>
+</body>
 </html>

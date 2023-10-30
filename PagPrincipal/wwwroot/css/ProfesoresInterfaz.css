@@ -1,0 +1,17 @@
+﻿body {
+}
+
+.Items_Index {
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center items vertically */
+    width: 150px;
+    height: auto;
+    border: 1.5px solid #000000;
+    border-radius: 10px;
+}
+
+.Index_Item{
+    width: 125px;
+    font-weight: bold;
+}

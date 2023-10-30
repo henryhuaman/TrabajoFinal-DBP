@@ -34,7 +34,7 @@ namespace PagPrincipal.Services.Repository
             return bd.TbCursos;
         }
 
-        public List<TbCurso> GetCursoPorCategoria(string categoria)
+        public IEnumerable<TbCurso> GetCursoPorCategoria(string categoria)
         {
             var obj = (from tcurso in bd.TbCursos
                        where tcurso.CateCur == categoria
@@ -71,6 +71,11 @@ namespace PagPrincipal.Services.Repository
         {
             var categorias = bd.TbCursos.Select(alumno => alumno.CateCur).Distinct().ToList();
             return categorias;
+        }
+
+        public IEnumerable<TbCurso> GetCursosbyProfe(TbProfesore profe)
+        {
+            return (from matching in bd.TbCursos where matching.CodPro == profe.CodPro select matching).ToList();
         }
     }
 }

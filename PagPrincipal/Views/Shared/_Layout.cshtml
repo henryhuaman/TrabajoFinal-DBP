@@ -1,6 +1,4 @@
-﻿@{
-    var model1 = ViewBag.Categorias as List<string>;
-}
+﻿@model PagPrincipal.Models.IndexViewModel
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -42,7 +40,7 @@
                                     <ul class="z-10 w-52 text-white absolute hidden group-hover:block list-none bg-black bg-opacity-50 p-2 rounded-lg">
                                     
                                         
-                                        @foreach (var item in model1)
+                                        @foreach (var item in Model.Categorias)
                                         { 
                                             <li class="hover:bg-black">
                                                 <a asp-controller="Categoria" asp-action="Index" asp-route-id="@item" class="block text-white py-2 ">@item</a>
