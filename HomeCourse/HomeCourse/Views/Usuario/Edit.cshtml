@@ -1,0 +1,47 @@
+﻿@model HomeCourse.Models.Usuario
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<body>
+    <form asp-action="EditDetails" method="post" class="max-w-md mx-auto mt-8">
+
+        <div class="mb-4">
+            <input asp-for="Id" type="hidden" id="CodCli" class="w-full py-2 px-3 border rounded focus:outline-none focus:border-blue-400" placeholder="Nombres">
+            <span asp-validation-for="Id" class="text-red-600"></span>
+        </div>
+
+        <div class="mb-4">
+            <label for="Nombre" class="block text-gray-700">NOMBRES</label>
+            <input asp-for="Nombre" id="Nombre" class="w-full py-2 px-3 border rounded focus:outline-none focus:border-blue-400" placeholder="Nombres">
+            <span asp-validation-for="Nombre" class="text-red-600"></span>
+        </div>
+
+        <div class="mb-4">
+            <label for="Correo" class="block text-gray-700">CORREO</label>
+            <input asp-for="Correo" id="Correo" class="w-full py-2 px-3 border rounded focus:outline-none focus:border-blue-400" placeholder="Correo">
+            <span asp-validation-for="Correo" class="text-red-600"></span>
+        </div>
+
+        <div class="mb-4">
+            <label for="Dni" class="block text-gray-700">DNI</label>
+            <input asp-for="Dni" id="Dni" class="w-full py-2 px-3 border rounded focus:outline-none focus:border-blue-400" placeholder="DNI">
+            <span asp-validation-for="Dni" class="text-red-600"></span>
+        </div>
+
+        <div class="mb-4">
+            <label for="Contraseña" class="block text-gray-700">CONTRASENA</label>
+            <input asp-for="Contraseña" id="ContraCli" class="w-full py-2 px-3 border rounded focus:outline-none focus:border-blue-400" placeholder="Contrasena">
+            <span asp-validation-for="Contraseña" class="text-red-600"></span>
+        </div>
+
+        <div class="mb-4">
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none" name="edit" data-toggle="modal" data-target="#exampleModal">Modificar</button>
+        </div>
+    </form>
+
+</body>
+
+</html>

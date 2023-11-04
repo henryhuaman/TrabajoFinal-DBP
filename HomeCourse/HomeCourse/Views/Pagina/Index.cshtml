@@ -1,0 +1,87 @@
+﻿@model IEnumerable<HomeCourse.Models.Curso>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<html>  
+    
+<body class="flex min-h-screen flex-col items-center justify-between p-24 gap-6 w-full bg-gradient-to-r from-cyan-800 from-30% via-cyan-800 via-50% to-cyan-950 to-80%">
+    <!--  ........ ...........-->
+    <!-- PRESENTACION -->
+    <section class="bg-cover bg-black bg-center bg-no-repeat py-64">
+        <div class="text-center  text-white">
+            <h2 class="text-5xl font-bold">Estudia desde tu casa</h2>
+            <p class="text-2xl">Conoce nuestros cursos con profesores de alta calidad.</p>
+        </div>
+    </section>
+    <!--  ........ ...........-->
+
+
+    <!-- CURSOS-->
+    <section class="relative bg-cover bg-center bg-no-repeat" style="background-image: url(../images/01.jpg); background-color: rgba(0, 0, 0, 0.1); height: 550px;">
+        <div class="absolute right-2/4 bottom-1/4 transform -translate-y-1/2 " style="font-family: Russo One">
+                <h1 id="cursos" class="text-center text-8xl font-bold ">CURSOS</h1>
+                <h2 class="text-center text-4xl">Descubre las categorias de cursos que tenemos</h2>
+            </div>
+        <div class="absolute right-1/2 transform translate-x-10 bottom-1/4 transform translate-y-1/4 bg-black w-1 h-96"></div>
+        <a href="/Pagina/MostrarCursos/" class="btn absolute bottom-2/4 left-3/4 transform -translate-x-1/2">Descubre</a>
+    </section>
+
+    <section class="relative bg-cover bg-sky-950 w-full h-16"></section>
+    <!--  ........ ...........-->
+
+    <!--PROFESORES-->
+    <!--<select class="form-control" id="formGroupExampleInput2"  asp-items='@(ViewBag.Opciones)'></select>-->
+    <section class="relative bg-cover bg-center bg-no-repeat" style="background-image: url(../images/profesor.png); height: 550px;">
+        <div class="absolute bottom-1/4 left-2/4 transform -translate-y-1/2" style="font-family: Russo One">
+            <h1 id="profesores" class="text-center text-8xl font-bold ">Profesores</h1>
+            <h2 class="text-center text-4xl">Conoce a nuestros profesores empenosos por repartir conocimientos</h2>
+        </div>
+        <div class="absolute right-1/2 transform -translate-x-10 bottom-1/4 transform translate-y-1/4 bg-black w-1 h-96"></div>
+        <a href="/Pagina/MostrarProfesores/" class="btn absolute right-3/4 bottom-2/4 transform translate-x-3/4">Conocelos</a>
+    </section>
+    <!--  ........ ...........-->
+
+    <section class="relative bg-cover bg-sky-950 w-full h-16"></section>
+
+
+    <!-- PLANES-->
+    @*<section class="relative bg-cover bg-center bg-yellow-300 items-center justify-center" style=" height: 900px;">
+        <div><h1 id="planes" class="text-center text-6xl font-bold p-14" style="font-family: Russo One">Planes</h1></div>
+
+        <div class="gap-10 flex justify-center ">
+            <div className='w-96 h-auto bg-slate-300 rounded-lg'>
+                <div className=''>
+                    <img href="/planes/plan1" src="https://res.cloudinary.com/practicaldev/image/fetch/s--hm2CKzCr--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/968idkl9ry6plny90y63.png" alt=image2 className='rounded-t-lg' />
+                </div>
+                <div className='rounded-b-lg bg-white p-2'>
+                    <div class="bg-white rounded-b-lg">
+                        <h1 className='text-center'>Membresia Normal</h1>
+                        <h2>descripcion</h2>
+                        <h2>100</h2>
+                        <Button text=Adquirir>adquirir</Button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div className='w-96 h-auto bg-slate-300 rounded-lg'>
+                <div className=''>
+                    <img href="/planes/plan1" src="https://res.cloudinary.com/practicaldev/image/fetch/s--hm2CKzCr--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/968idkl9ry6plny90y63.png" alt=image2 className='rounded-t-lg' />
+                </div>
+                <div className='rounded-b-lg bg-white p-2'>
+                    <div class="bg-white rounded-b-lg">
+                        <h1 className='text-center'>Membresia Normal</h1>
+                        <h2>descripcion</h2>
+                        <h2>100</h2>
+                        <Button text=Adquirir>adquirir</Button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>*@
+    <!--  ..................................-->
+
+    </body>
+</html>

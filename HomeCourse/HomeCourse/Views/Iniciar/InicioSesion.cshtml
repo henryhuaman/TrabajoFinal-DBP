@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<body class="bg-gray-100">
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="w-full max-w-md">
+            <form asp-action="Verification" method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <h2 class="text-2xl font-bold text-center mb-6">INICIO DE SESION</h2>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-600 text-sm font-bold mb-2">Correo Electrónico:</label>
+                    <input type="text" name="email" id="email" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Username">
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block text-gray-600 text-sm font-bold mb-2">Contraseña:</label>
+                    <input type="password" name="password" id="password" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Password">
+                </div>
+                <div class="mb-4 text-center">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" type="submit">
+                        INGRESAR
+                    </button>
+                </div>
+            </form>
+            <div class="text-center">
+                <button class="text-blue-500 hover:text-blue-700 font-bold" type="button" onclick="window.location.href='/Pagina/Index'">
+                    <img src="/images/regresar.png" alt="Regresar" class="inline align-text-bottom">
+                    Regresar
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
