@@ -29,6 +29,7 @@ namespace HomeCourse.Controllers
             {
                 ViewBag.Layout = "_Layout";
             }
+            ViewBag.Cursos = obj; 
             return View(prof.GetAllProfesores());
         }
 

@@ -11,9 +11,9 @@ namespace HomeCourse.Services.Repository
             _compras.Add(curso);
         }
 
-        public void Delete(CarritoDeCompras id)
-        {
-            _compras.Remove(id);
+        public void Delete(string id)
+        {   
+            _compras.RemoveAll(c => c.CodCur == id);
         }
 
         public void DeleteAll()

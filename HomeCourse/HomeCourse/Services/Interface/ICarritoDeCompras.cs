@@ -7,7 +7,7 @@ namespace HomeCourse.Services.Interface
         IEnumerable<CarritoDeCompras> GetAllCarritoDeCompras();
         void Add(CarritoDeCompras curso);
         void Update(CarritoDeCompras curso);
-        void Delete(CarritoDeCompras id);
+        void Delete(string id);
         void DeleteAll();
 
     }

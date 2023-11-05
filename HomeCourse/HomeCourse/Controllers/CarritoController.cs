@@ -39,13 +39,22 @@ namespace HomeCourse.Controllers
         }
 
         public IActionResult Agregar(String id)
-        {   
-            var cur = obj.GetCurso(id);
-            var car = new CarritoDeCompras();
-            car.NomCur = cur.Nombre;
-            car.CodCur = cur.Id;
-            car.CateCur = cur.Categoria;
-            carrito.Add(car);
+        {
+            var c = carrito.GetAllCarritoDeCompras().FirstOrDefault(ci =>ci.CodCur ==id);
+            if (c == null)
+            {
+                var cur = obj.GetCurso(id);
+                var car = new CarritoDeCompras();
+                car.NomCur = cur.Nombre;
+                car.CodCur = cur.Id;
+                car.CateCur = cur.Categoria;
+                carrito.Add(car);
+            }
+            return RedirectToAction("Index");
+        }
+        public IActionResult Quitar(String id)
+        {
+            carrito.Delete(id);
             return RedirectToAction("Index");
         }
 

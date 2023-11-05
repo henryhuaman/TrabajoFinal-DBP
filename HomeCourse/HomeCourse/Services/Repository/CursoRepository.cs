@@ -73,9 +73,9 @@ namespace HomeCourse.Services.Repository
             return categorias;
         }
 
-        public IEnumerable<Curso> GetCursosbyProfe(Profesor profe)
+        public IEnumerable<Curso> GetCursosbyProfe(string id)
         {
-            return (from matching in bd.Cursos where matching.ProfesorId == profe.Id select matching).ToList();
+            return (from matching in bd.Cursos where matching.ProfesorId == id select matching).ToList();
         }
     }
 }
