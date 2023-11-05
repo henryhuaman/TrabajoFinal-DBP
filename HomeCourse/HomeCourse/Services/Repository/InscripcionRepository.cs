@@ -72,5 +72,21 @@ namespace HomeCourse.Services.Repository
         {
             throw new NotImplementedException();
         }
+
+        public List<Relacion> getRelacion(string id)
+        {
+            var result = (from inscripcion in bd.Inscripcions
+                          join curso in bd.Cursos on inscripcion.CursoId equals curso.Id
+                          join profesor in bd.Profesors on curso.ProfesorId equals profesor.Id
+                          where inscripcion.UsuarioId == id
+                          select new Relacion
+                          {
+                              ID = inscripcion.Id,
+                              NOMBRE = curso.Nombre,
+                              PROFESOR = profesor.Nombre,
+                              CATEGORIA = curso.Categoria
+                          }).ToList();
+            return result;
+        }
     }
 }

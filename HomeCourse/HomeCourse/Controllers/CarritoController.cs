@@ -24,19 +24,22 @@ namespace HomeCourse.Controllers
             if (HttpContext.Session.GetString("UsuarioId") != null)
             {
                 ViewBag.Layout = "_LayoutUser";
+                var carr= carrito.GetAllCarritoDeCompras();
+                ViewData["Monto"] = MontoTotal();
+                return View(carr);
             }
             else
             {
                 ViewBag.Layout = "_Layout";
+                var carr = carrito.GetAllCarritoDeCompras();
+                ViewData["Monto"] = MontoTotal();
+                return View(carr);
             }
-            var inscripciones = inscrip.getIDCorrelativo();
-            ViewBag.Categorias = obj.GetCategorias();
-            ViewData["Monto"] = MontoTotal();
-            return View(carrito.GetAllCarritoDeCompras());
+            
         }
 
         public IActionResult Agregar(String id)
-        {
+        {   
             var cur = obj.GetCurso(id);
             var car = new CarritoDeCompras();
             car.NomCur = cur.Nombre;

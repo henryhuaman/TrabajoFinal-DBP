@@ -15,8 +15,7 @@ namespace HomeCourse.Controllers
         }
 
         public IActionResult Index()
-        {   
-            ViewBag.Categorias = obj.GetCategorias();
+        {
             return View(obj.GetAllCurso());
         }
 
@@ -30,7 +29,6 @@ namespace HomeCourse.Controllers
             {
                 ViewBag.Layout = "_Layout";
             }
-            ViewBag.Categorias = obj.GetCategorias();
             return View(prof.GetAllProfesores());
         }
 

@@ -9,25 +9,43 @@ namespace HomeCourse.Controllers
 
         private readonly IUsuario usu;
         private readonly ICurso obj;
+        private readonly IInscripcion ins;
 
-        public UsuarioController(IUsuario usu, ICurso obj)
+        public UsuarioController(IUsuario usu, ICurso obj, IInscripcion ins)
         {
             this.usu = usu;
             this.obj = obj;
+            this.ins = ins;
 
         }
         public IActionResult Index()
         {
+            if (HttpContext.Session.GetString("UsuarioId") != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index", "Pagina");
+            }
             
-            return View();
         }
         [Route("inicio/verPerfil")]
         public IActionResult VerPerfil()
         {
-            var usuarioId = HttpContext.Session.GetString("UsuarioId");
-            var usuario = usu.getUsuariobyCod(usuarioId);
+            if (HttpContext.Session.GetString("UsuarioId") != null)
+            {
+                ViewBag.Layout = "_LayoutUser";
+                var usuarioId = HttpContext.Session.GetString("UsuarioId");
+                var usuario = usu.getUsuariobyCod(usuarioId);
 
-            return View(usuario);
+                return View(usuario);
+            }
+            else
+            {
+                return RedirectToAction("Index","Pagina");
+            }
+            
         }
 
         public IActionResult CerrarSesion()
@@ -48,6 +66,20 @@ namespace HomeCourse.Controllers
             HttpContext.Session.SetString("UsuarioId", usuario.Id);
 
             return RedirectToAction("VerPerfil");
+        }
+
+        public IActionResult VerSusCursos()
+        {
+            if (HttpContext.Session.GetString("UsuarioId") != null)
+            {
+                ViewBag.Categorias = obj.GetCategorias();
+                return View(ins.getRelacion(HttpContext.Session.GetString("UsuarioId")));
+            }
+            else
+            {
+                return RedirectToAction("Index", "Pagina");
+            }
+            
         }
     }
 }

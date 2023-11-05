@@ -10,5 +10,6 @@ namespace HomeCourse.Services.Interface
         void Add(List<Inscripcion> listinsc);
         IEnumerable<Inscripcion> GetInscripcion(string id);
         String getIDCorrelativo();
+        List<Relacion> getRelacion(string id);
     }
 }

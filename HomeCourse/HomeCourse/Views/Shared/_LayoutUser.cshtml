@@ -21,7 +21,7 @@
                 <div class="flex space-x-4 flex items-center">
                     <!-- Logo o Título -->
                     <div class="logo">
-                        <a asp-area="" asp-controller="Pagina" asp-action="Index"><img alt="Icono" class="button-icon w-28 h-28" src="~/images/iconoPrincipal.png"/></a>
+                        <a asp-area="" asp-controller="Usuario" asp-action="Index"><img alt="Icono" class="button-icon w-28 h-28" src="~/images/iconoPrincipal.png"/></a>
                     </div>
 
                     <!-- Menú de Navegación -->
@@ -29,7 +29,7 @@
                         <ul class="text-2xl flex" style="font-family: fantasy">
                             <li class="static"><a class="px-2 hover:text-yellow-400 transition duration-800" key"Cursos" href="@Url.Action("MostrarCursos", "Pagina")#cursos">Cursos</a></li>
                             <li class="static"><a class="px-2 hover:text-yellow-400 transition duration-800" key:"Profesores" href="@Url.Action("MostrarProfesores", "Pagina")#profesores">Profesores</a></li>
-                            <li class="static"><a class="px-2 hover:text-yellow-400 transition duration-800" key:"Planes" href="@Url.Action("Index", "Pagina")  #planes">Tus Cursos</a></li>
+                            <li class="static"><a class="px-2 hover:text-yellow-400 transition duration-800" key:"Tus Cursos" href="@Url.Action("VerSusCursos", "Usuario") ">Tus Cursos</a></li>
                             @*<li class="relative group">
                                 <a class="px-2 hover:text-yellow-400 transition duration-800">Categoria</a>
                                     <ul class="z-10 w-52 text-white absolute hidden group-hover:block list-none bg-black bg-opacity-50 p-2 rounded-lg">
@@ -57,8 +57,8 @@
 
                 <div class="text-2xl flex items-center" style="font-family: fantasy">
                     <ul class="flex space-x-8">
-                        <li class="transform hover:scale-125 transition duration-300"><a class="hover:text-yellow-400 transition duration-500" href="">Registrate</a></li>
-                        <li class="transform hover:scale-125 transition duration-300"><a class="hover:text-yellow-400 transition duration-500" href="/Iniciar/InicioSesion">Iniciar Sesion</a></li>
+                        
+                        <li class="transform hover:scale-125 transition duration-300"><a class="hover:text-red-400 transition duration-500" href="/Usuario/CerrarSesion">Cerrar Sesion</a></li>
                     </ul>
                 </div>
             </ul>

@@ -30,7 +30,8 @@ namespace HomeCourse.Controllers
             {
                 if (Profe.passwordMatchvyEmail(email, password))
                 {
-                    return RedirectToAction("Index", "Profesores", new { email, password });
+                    HttpContext.Session.SetString("ProfesorId", Profe.getProfesorbyCorreo(email).Id);
+                    return RedirectToAction("Index", "Profesor");
                 }
                 else
                 {
@@ -46,7 +47,7 @@ namespace HomeCourse.Controllers
                 }
                 else
                 {
-                    return RedirectToAction("InicioSesion", "Usuario");
+                    return RedirectToAction("InicioSesion", "Iniciar");
                 }
             }
             else
