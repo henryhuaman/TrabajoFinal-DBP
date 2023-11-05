@@ -8,16 +8,28 @@ namespace HomeCourse.Controllers
     {
         private readonly ICarritoDeCompras carrito;
         private readonly ICurso obj;
-        public CarritoController(ICarritoDeCompras temporal, ICurso obj)
+        private readonly IInscripcion inscrip;
+        private readonly IUsuario usu;
+        public CarritoController(ICarritoDeCompras temporal, ICurso obj, IInscripcion inscrip, IUsuario usu)
         {
             carrito = temporal;
             this.obj = obj;
+            this.inscrip = inscrip;
+            this.usu = usu;
         }
 
 
         public IActionResult Index()
         {
-
+            if (HttpContext.Session.GetString("UsuarioId") != null)
+            {
+                ViewBag.Layout = "_LayoutUser";
+            }
+            else
+            {
+                ViewBag.Layout = "_Layout";
+            }
+            var inscripciones = inscrip.getIDCorrelativo();
             ViewBag.Categorias = obj.GetCategorias();
             ViewData["Monto"] = MontoTotal();
             return View(carrito.GetAllCarritoDeCompras());
@@ -34,6 +46,32 @@ namespace HomeCourse.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult Comprar()
+        {
+            if (HttpContext.Session.GetString("UsuarioId")==null)
+            {
+                return RedirectToAction("InicioSesion","Iniciar");
+            }
+            else
+            {
+                var lst = new List<Inscripcion>();
+                foreach (var cur in carrito.GetAllCarritoDeCompras())
+                {
+                    var ins = new Inscripcion();
+                    ins.Id = inscrip.getIDCorrelativo();
+                    ins.UsuarioId = HttpContext.Session.GetString("UsuarioId");
+                    ins.CursoId = cur.CodCur;
+                    ins.InsFecha = DateTime.Now.ToString("yyyy-MM-dd");
+                    lst.Add(ins);
+                }
+                inscrip.Add(lst);
+
+                carrito.DeleteAll();
+                
+                return RedirectToAction("Index");
+            }
+            
+        }
 
         public decimal MontoTotal()
         {
@@ -42,5 +80,8 @@ namespace HomeCourse.Controllers
             decimal monto = lista*1000;
             return monto;
         }
+
+
+
     }
 }

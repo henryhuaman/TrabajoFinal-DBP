@@ -8,10 +8,11 @@ namespace HomeCourse.Services.Interface
         void Add(Curso curso);
         void Update(Curso curso);
         void Delete(string id);
-
         Curso GetCurso(string id);
-
-        List<Curso> GetCursoPorCategoria(string categoria);
         List<string> GetCategorias();
+        IEnumerable<Curso> GetCursosbyProfe(Profesor profe);
+        List<Curso> GetCursoPorCategoria(string categoria); 
+
+        
     }
 }

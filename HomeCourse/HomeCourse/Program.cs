@@ -9,6 +9,7 @@ builder.Services.Add(new ServiceDescriptor(typeof(ICurso), new CursoRepository()
 builder.Services.Add(new ServiceDescriptor(typeof(IProfesor), new ProfesorRepository()));
 builder.Services.Add(new ServiceDescriptor(typeof(ICarritoDeCompras), new CarritoDeComprasRepository()));
 builder.Services.Add(new ServiceDescriptor(typeof(IUsuario), new UsuarioRepository()));
+builder.Services.Add(new ServiceDescriptor(typeof(IInscripcion), new InscripcionRepository()));
 
 builder.Services.AddSession(options => {
     options.IdleTimeout = TimeSpan.FromSeconds(3600);

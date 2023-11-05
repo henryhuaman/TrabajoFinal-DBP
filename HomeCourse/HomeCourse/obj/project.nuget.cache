@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j5TGm+KUonOeIquCldi9XShkZBrGfEnfQdXiEkt+vxxYajUKYsqj4TrzlWFdOXWN2iGtqUNYFh+hyeM5f6Pw/Q==",
+  "dgSpecHash": "sq+eROvdPK0z2yqeMP1q9hypt5+0oCnKZVQe4v14FrRzCl3DFmhlcvLtKxXB6owsl36yV7dh5hebvg/wVouOrQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\henry\\OneDrive\\Escritorio\\de la usil\\3 ciclo\\libroBasadoPlataformas\\123\\ELNUEVO\\HomeCourse\\HomeCourse\\HomeCourse.csproj",
+  "projectFilePath": "C:\\Users\\henry\\OneDrive\\Escritorio\\de la usil\\3 ciclo\\libroBasadoPlataformas\\123\\ELNUEVO\\TrabajoFinal-DBP\\HomeCourse\\HomeCourse\\HomeCourse.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\henry\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\henry\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

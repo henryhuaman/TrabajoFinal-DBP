@@ -22,12 +22,28 @@ namespace HomeCourse.Controllers
 
         public IActionResult MostrarProfesores()
         {
+            if (HttpContext.Session.GetString("UsuarioId") != null)
+            {
+                ViewBag.Layout = "_LayoutUser";
+            }
+            else
+            {
+                ViewBag.Layout = "_Layout";
+            }
             ViewBag.Categorias = obj.GetCategorias();
             return View(prof.GetAllProfesores());
         }
 
         public IActionResult MostrarCursos()
         {
+            if (HttpContext.Session.GetString("UsuarioId") != null)
+            {
+                ViewBag.Layout = "_LayoutUser";
+            }
+            else
+            {
+                ViewBag.Layout = "_Layout";
+            }
             ViewBag.Categorias = obj.GetCategorias();
             return View(obj.GetAllCurso());
         }

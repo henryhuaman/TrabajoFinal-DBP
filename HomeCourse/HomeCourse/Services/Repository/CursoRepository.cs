@@ -72,5 +72,10 @@ namespace HomeCourse.Services.Repository
             var categorias = bd.Cursos.Select(alumno => alumno.Categoria).Distinct().ToList();
             return categorias;
         }
+
+        public IEnumerable<Curso> GetCursosbyProfe(Profesor profe)
+        {
+            return (from matching in bd.Cursos where matching.ProfesorId == profe.Id select matching).ToList();
+        }
     }
 }

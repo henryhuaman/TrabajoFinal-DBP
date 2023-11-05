@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\henry\\OneDrive\\Escritorio\\de la usil\\3 ciclo\\libroBasadoPlataformas\\123\\ELNUEVO\\HomeCourse\\HomeCourse\\HomeCourse.csproj": {}
+    "C:\\Users\\henry\\OneDrive\\Escritorio\\de la usil\\3 ciclo\\libroBasadoPlataformas\\123\\ELNUEVO\\TrabajoFinal-DBP\\HomeCourse\\HomeCourse\\HomeCourse.csproj": {}
   },
   "projects": {
-    "C:\\Users\\henry\\OneDrive\\Escritorio\\de la usil\\3 ciclo\\libroBasadoPlataformas\\123\\ELNUEVO\\HomeCourse\\HomeCourse\\HomeCourse.csproj": {
+    "C:\\Users\\henry\\OneDrive\\Escritorio\\de la usil\\3 ciclo\\libroBasadoPlataformas\\123\\ELNUEVO\\TrabajoFinal-DBP\\HomeCourse\\HomeCourse\\HomeCourse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\henry\\OneDrive\\Escritorio\\de la usil\\3 ciclo\\libroBasadoPlataformas\\123\\ELNUEVO\\HomeCourse\\HomeCourse\\HomeCourse.csproj",
+        "projectUniqueName": "C:\\Users\\henry\\OneDrive\\Escritorio\\de la usil\\3 ciclo\\libroBasadoPlataformas\\123\\ELNUEVO\\TrabajoFinal-DBP\\HomeCourse\\HomeCourse\\HomeCourse.csproj",
         "projectName": "HomeCourse",
-        "projectPath": "C:\\Users\\henry\\OneDrive\\Escritorio\\de la usil\\3 ciclo\\libroBasadoPlataformas\\123\\ELNUEVO\\HomeCourse\\HomeCourse\\HomeCourse.csproj",
+        "projectPath": "C:\\Users\\henry\\OneDrive\\Escritorio\\de la usil\\3 ciclo\\libroBasadoPlataformas\\123\\ELNUEVO\\TrabajoFinal-DBP\\HomeCourse\\HomeCourse\\HomeCourse.csproj",
         "packagesPath": "C:\\Users\\henry\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\henry\\OneDrive\\Escritorio\\de la usil\\3 ciclo\\libroBasadoPlataformas\\123\\ELNUEVO\\HomeCourse\\HomeCourse\\obj\\",
+        "outputPath": "C:\\Users\\henry\\OneDrive\\Escritorio\\de la usil\\3 ciclo\\libroBasadoPlataformas\\123\\ELNUEVO\\TrabajoFinal-DBP\\HomeCourse\\HomeCourse\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

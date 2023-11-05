@@ -16,6 +16,11 @@ namespace HomeCourse.Services.Repository
             _compras.Remove(id);
         }
 
+        public void DeleteAll()
+        {
+            _compras.Clear();
+        }
+
         public IEnumerable<CarritoDeCompras> GetAllCarritoDeCompras()
         {
             return _compras ;

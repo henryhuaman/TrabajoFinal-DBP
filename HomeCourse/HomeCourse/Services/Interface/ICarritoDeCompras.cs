@@ -8,6 +8,7 @@ namespace HomeCourse.Services.Interface
         void Add(CarritoDeCompras curso);
         void Update(CarritoDeCompras curso);
         void Delete(CarritoDeCompras id);
+        void DeleteAll();
 
     }
 }
