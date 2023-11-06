@@ -1,9 +1,12 @@
-﻿@model IEnumerable<HomeCourse.Models.Profesor>
+﻿@model HomeCourse.Models.ProfYCur
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
     Layout = ViewBag.Layout;
+    var a = Model as ProfYCur;
+    var cursos = a.cursos;
+    var profesores = a.profesors;
 }
 <html>
 <body>
@@ -11,7 +14,7 @@
         <h1 class="text-3xl font-bold mb-4">Catálogo de Profesores</h1>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            @foreach (var pro in Model)
+            @foreach (var pro in profesores)
             {
                 <div class="bg-white rounded-lg shadow-md mb-14">
                     <img src="https://via.placeholder.com/200" alt="Foto del profesor" class="w-full h-40 object-cover rounded-t-lg">
@@ -40,56 +43,25 @@
                             </div>
                             <div class="my-5">
                                 <h1 class='my-4'><strong>Nombre:</strong> @pro.Nombre </h1>
-                                <p class='my-4'><strong>Correo:</strong>@pro.Correo</p>
+                                <p class='my-4'><strong>Correo:</strong> @pro.Correo</p>
                                 <p class='my-4'><strong>Telefono:</strong> @pro.Telefono</p>
-                                <p class='my-4'><strong>Cursos:</strong> curso.PreCur</p>
-                                <div>
-                                    @eac
+                                <p class='my-4'><strong>Cursos:</strong></p>
+                                <div class="translate-x-20">
+                                    @{
+                                        var result = from curso in cursos
+                                                     where pro.Id == curso.ProfesorId
+                                                     select curso;
+                                    }
+                                    @foreach (var curs in result)
+                                    {
+                                        <p class='my-4'>- @curs.Nombre</p>
+                                    }
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             }
-
-            <!-- Profesor 1 -->
-            <div class="bg-white rounded-lg shadow-md mb-14">
-                <img src="https://via.placeholder.com/200" alt="Foto del profesor" class="w-full h-40 object-cover rounded-t-lg">
-                <div class="p-4">
-                    <h2 class="text-xl font-semibold">Profesor 1</h2>
-                    <p class="text-gray-600">Materia: Matemáticas</p>
-                    <p class="text-gray-600">Experiencia: 10 años</p>
-                </div>
-                <div class="p-4 bg-gray-100 border-t border-gray-200 rounded-b-lg">
-                    <a href="#" class="text-blue-500 hover:underline">Ver perfil</a>
-                </div>
-            </div>
-
-            <!-- Profesor 2 -->
-            <div class="bg-white rounded-lg shadow-md mb-14">
-                <img src="https://via.placeholder.com/200" alt="Foto del profesor" class="w-full h-40 object-cover rounded-t-lg">
-                <div class="p-4">
-                    <h2 class="text-xl font-semibold">Profesor 2</h2>
-                    <p class="text-gray-600">Materia: Historia</p>
-                    <p class="text-gray-600">Experiencia: 8 años</p>
-                </div>
-                <div class="p-4 bg-gray-100 border-t border-gray-200 rounded-b-lg">
-                    <a href="#" class="text-blue-500 hover:underline">Ver perfil</a>
-                </div>
-            </div>
-
-            <!-- Profesor 3 -->
-            <div class="bg-white rounded-lg shadow-md mb-14">
-                <img src="https://via.placeholder.com/200" alt="Foto del profesor" class="w-full h-40 object-cover rounded-t-lg">
-                <div class="p-4">
-                    <h2 class="text-xl font-semibold">Profesor 3</h2>
-                    <p class="text-gray-600">Materia: Ciencias</p>
-                    <p class="text-gray-600">Experiencia: 12 años</p>
-                </div>
-                <div class="p-4 bg-gray-100 border-t border-gray-200 rounded-b-lg">
-                    <a href="#" class="text-blue-500 hover:underline">Ver perfil</a>
-                </div>
-            </div>
         </div>
     </div>
 </body>

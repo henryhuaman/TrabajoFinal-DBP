@@ -1,4 +1,5 @@
-﻿using HomeCourse.Services.Interface;
+﻿using HomeCourse.Models;
+using HomeCourse.Services.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HomeCourse.Controllers
@@ -29,8 +30,14 @@ namespace HomeCourse.Controllers
             {
                 ViewBag.Layout = "_Layout";
             }
-            ViewBag.Cursos = obj; 
-            return View(prof.GetAllProfesores());
+
+            var group = new ProfYCur
+            {
+                profesors = prof.GetAllProfesores(),
+                cursos = obj.GetAllCurso()
+            };
+
+            return View(group);
         }
 
         public IActionResult MostrarCursos()
@@ -46,5 +53,7 @@ namespace HomeCourse.Controllers
             ViewBag.Categorias = obj.GetCategorias();
             return View(obj.GetAllCurso());
         }
+
+        
     }
 }

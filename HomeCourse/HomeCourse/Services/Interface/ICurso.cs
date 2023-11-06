@@ -10,7 +10,7 @@ namespace HomeCourse.Services.Interface
         void Delete(string id);
         Curso GetCurso(string id);
         List<string> GetCategorias();
-        IEnumerable<Curso> GetCursosbyProfe(Profesor profe);
+        IEnumerable<Curso> GetCursosbyProfe(string id);
         List<Curso> GetCursoPorCategoria(string categoria); 
 
         
