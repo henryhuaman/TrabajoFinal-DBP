@@ -56,9 +56,18 @@ namespace HomeCourse.Controllers
         [Route("inicio/Editar")]
         public IActionResult Edit()
         {
-            var usuarioId = HttpContext.Session.GetString("UsuarioId");
-            var usuario = usu.getUsuariobyCod(usuarioId);
-            return View(usuario);
+            if (HttpContext.Session.GetString("UsuarioId") != null)
+            {
+                var usuarioId = HttpContext.Session.GetString("UsuarioId");
+                var usuario = usu.getUsuariobyCod(usuarioId);
+                ViewBag.Layout = "_LayoutUser";
+                return View(usuario);
+            }
+            else
+            {
+                return RedirectToAction("Index", "Pagina");
+            }
+                
         }
         public IActionResult EditDetails(Usuario usuario)
         {
