@@ -23,7 +23,10 @@ namespace HomeCourse.Controllers
         {
             return View();
         }
-
+        public IActionResult Registro()
+        {
+            return View();
+        }
         public IActionResult Verification(string email, string password)
         {
             if (Profe.ProfesorExistsbyCorreo(email))

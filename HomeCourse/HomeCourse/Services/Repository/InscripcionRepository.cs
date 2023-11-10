@@ -7,20 +7,18 @@ namespace HomeCourse.Services.Repository
     {
         private BDWeb bd = new BDWeb();
 
-        public void Add(List<Inscripcion> listinsc)
+        public void Add(Inscripcion listinsc)
         {
-            foreach (var insc in listinsc)
-            {
                 try
                 {
-                    bd.Add(insc);
+                    bd.Add(listinsc);
                     bd.SaveChanges();
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
+                    Console.WriteLine("hola");
                 }
-            }
         }
 
         public void Delete(string id)
@@ -41,7 +39,7 @@ namespace HomeCourse.Services.Repository
             if (lista.Any())
             {
                 var numero = lista.Select(t => int.Parse(new String(t.Id.Where(char.IsDigit).ToArray()))).Max();
-
+                Console.WriteLine(numero);
                 if (numero.ToString().Length == 1)
                 {
                     cod = "IN00" + (numero+1);
@@ -68,9 +66,11 @@ namespace HomeCourse.Services.Repository
             }
         }
 
-        public IEnumerable<Inscripcion> GetInscripcion(string id)
+        public Inscripcion GetInscripcion(string idCur, string idUsu)
         {
-            throw new NotImplementedException();
+            var result = bd.Inscripcions.FirstOrDefault(ins => ins.CursoId == idCur && ins.UsuarioId == idUsu);
+
+            return result;
         }
 
         public List<Relacion> getRelacion(string id)

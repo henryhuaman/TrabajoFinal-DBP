@@ -7,8 +7,8 @@ namespace HomeCourse.Services.Interface
         IEnumerable<Inscripcion> GetAllInscripciones();
 
         void Delete(String id);
-        void Add(List<Inscripcion> listinsc);
-        IEnumerable<Inscripcion> GetInscripcion(string id);
+        void Add(Inscripcion listinsc);
+        Inscripcion GetInscripcion(string id, string idUsu);
         String getIDCorrelativo();
         List<Relacion> getRelacion(string id);
     }

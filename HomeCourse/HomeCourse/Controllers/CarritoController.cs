@@ -66,20 +66,32 @@ namespace HomeCourse.Controllers
             }
             else
             {
-                var lst = new List<Inscripcion>();
+                List<Inscripcion> lst = new List<Inscripcion>();
                 foreach (var cur in carrito.GetAllCarritoDeCompras())
-                {
+                {   
+                    
                     var ins = new Inscripcion();
-                    ins.Id = inscrip.getIDCorrelativo();
+                    //ins.Id = inscrip.getIDCorrelativo();
+                    Console.WriteLine(cur.NomCur);
                     ins.UsuarioId = HttpContext.Session.GetString("UsuarioId");
                     ins.CursoId = cur.CodCur;
                     ins.InsFecha = DateTime.Now.ToString("yyyy-MM-dd");
-                    lst.Add(ins);
-                }
-                inscrip.Add(lst);
 
+                    if (inscrip.GetInscripcion(ins.CursoId,ins.UsuarioId)==null)
+                    {
+                        lst.Add(ins);
+                        
+                    }
+
+                }
+                foreach (var lt in lst) 
+                {
+                    Inscripcion aux = lt;
+                    aux.Id = inscrip.getIDCorrelativo();
+                    inscrip.Add(aux);
+                }
                 carrito.DeleteAll();
-                
+
                 return RedirectToAction("Index");
             }
             
