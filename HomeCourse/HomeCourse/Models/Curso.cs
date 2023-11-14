@@ -15,7 +15,7 @@ public partial class Curso
 
     public string ProfesorId { get; set; } = null!;
 
-    public virtual ICollection<Inscripcion> Inscripcions { get; set; } = new List<Inscripcion>();
+    public double Precio { get; set; }
 
     public virtual Profesor Profesor { get; set; } = null!;
 }

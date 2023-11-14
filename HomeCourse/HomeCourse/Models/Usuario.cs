@@ -14,6 +14,4 @@ public partial class Usuario
     public string? Contraseña { get; set; }
 
     public string? Dni { get; set; }
-
-    public virtual ICollection<Inscripcion> Inscripcions { get; set; } = new List<Inscripcion>();
 }

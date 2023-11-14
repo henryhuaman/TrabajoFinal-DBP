@@ -5,7 +5,7 @@ namespace HomeCourse.Services.Repository
 {
     public class ProfesorRepository : IProfesor
     {
-        BDWeb bd = new BDWeb();
+        BdWeb bd = new BdWeb();
 
         public IEnumerable<Profesor> GetAllProfesores()
         {

@@ -5,7 +5,7 @@ namespace HomeCourse.Services.Repository
 {
     public class InscripcionRepository : IInscripcion
     {
-        private BDWeb bd = new BDWeb();
+        private BdWeb bd = new BdWeb();
 
         public void Add(Inscripcion listinsc)
         {
@@ -38,7 +38,7 @@ namespace HomeCourse.Services.Repository
 
             if (lista.Any())
             {
-                var numero = lista.Select(t => int.Parse(new String(t.Id.Where(char.IsDigit).ToArray()))).Max();
+                var numero = lista.Select(t => int.Parse(new String(t.CodOpe.Where(char.IsDigit).ToArray()))).Max();
                 Console.WriteLine(numero);
                 if (numero.ToString().Length == 1)
                 {
@@ -81,7 +81,7 @@ namespace HomeCourse.Services.Repository
                           where inscripcion.UsuarioId == id
                           select new Relacion
                           {
-                              ID = inscripcion.Id,
+                              ID = inscripcion.CodOpe,
                               NOMBRE = curso.Nombre,
                               PROFESOR = profesor.Nombre,
                               CATEGORIA = curso.Categoria

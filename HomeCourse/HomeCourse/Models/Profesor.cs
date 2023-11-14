@@ -17,5 +17,7 @@ public partial class Profesor
 
     public string Dni { get; set; } = null!;
 
+    public string Descripcion { get; set; } = null!;
+
     public virtual ICollection<Curso> Cursos { get; set; } = new List<Curso>();
 }

@@ -5,7 +5,7 @@ namespace HomeCourse.Services.Repository
 {
     public class CursoRepository : ICurso
     {
-        private BDWeb bd = new BDWeb();
+        private BdWeb bd = new BdWeb();
 
         public void Add(Curso curso)
         {

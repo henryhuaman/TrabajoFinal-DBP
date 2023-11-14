@@ -5,7 +5,7 @@ namespace HomeCourse.Services.Repository
 {
     public class UsuarioRepository : IUsuario
     {   
-        private BDWeb bd = new BDWeb();
+        private BdWeb bd = new BdWeb();
         public IEnumerable<Usuario> GetAllUsuarios()
         {
             return bd.Usuarios;

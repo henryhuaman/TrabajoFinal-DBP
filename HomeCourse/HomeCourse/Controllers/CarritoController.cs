@@ -77,17 +77,19 @@ namespace HomeCourse.Controllers
                     ins.CursoId = cur.CodCur;
                     ins.InsFecha = DateTime.Now.ToString("yyyy-MM-dd");
 
-                    if (inscrip.GetInscripcion(ins.CursoId,ins.UsuarioId)==null)
+                    if (!inscrip.GetAllInscripciones().Any(i=>i.CursoId==ins.CursoId && i.UsuarioId==ins.UsuarioId))
                     {
-                        lst.Add(ins);
+                        lst.Add(ins);   
                         
                     }
 
                 }
+                string ID = inscrip.getIDCorrelativo();
                 foreach (var lt in lst) 
                 {
                     Inscripcion aux = lt;
-                    aux.Id = inscrip.getIDCorrelativo();
+                    aux.CodOpe = ID;
+                    Console.WriteLine(aux.CodOpe);
                     inscrip.Add(aux);
                 }
                 carrito.DeleteAll();
