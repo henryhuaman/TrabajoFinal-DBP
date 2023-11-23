@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yRs+QYHoQeIK4dyKtd5JbOcTxyxJD4cCOfVerpWc9wc=",
+  "Hash": "FPjhrNyXBawE3Xy1onf6ZEtcrU7JG6VWila+9gStzFM=",
   "Source": "HomeCourse",
   "BasePath": "_content/HomeCourse",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\henry\\OneDrive\\Escritorio\\de la usil\\3 ciclo\\libroBasadoPlataformas\\123\\ELNUEVO\\TrabajoFinal-DBP\\HomeCourse\\HomeCourse\\wwwroot\\css\\Tablas.css",
+      "SourceId": "HomeCourse",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\henry\\OneDrive\\Escritorio\\de la usil\\3 ciclo\\libroBasadoPlataformas\\123\\ELNUEVO\\TrabajoFinal-DBP\\HomeCourse\\HomeCourse\\wwwroot\\",
+      "BasePath": "_content/HomeCourse",
+      "RelativePath": "css/Tablas.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Tablas.css"
     },
     {
       "Identity": "C:\\Users\\henry\\OneDrive\\Escritorio\\de la usil\\3 ciclo\\libroBasadoPlataformas\\123\\ELNUEVO\\TrabajoFinal-DBP\\HomeCourse\\HomeCourse\\wwwroot\\favicon.ico",

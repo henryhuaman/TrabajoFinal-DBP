@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - HomeCourse</title>
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+    <link rel="stylesheet" href="~/css/estilos.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @*<link rel="stylesheet" href="~/HomeCourse.styles.css" asp-append-version="true" />*@
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body class="max-w-screen ">
+    <header class="">
+        <nav class="bg-gradient-to-r from-sky-800 from-30% via-sky-800 via-50% to-sky-950 to-80% shadow-2xl mb-3 p-4">
+            <ul class="text-blue-300 container mx-auto flex justify-between items-center">
+                
+                <div class="flex space-x-4 flex items-center">
+                    <!-- Logo o Título -->
+                    <div class="logo">
+                        <a asp-area="" asp-controller="Profesor" asp-action="Index"><img alt="Icono" class="button-icon w-28 h-28" src="~/images/iconoPrincipal.png"/></a>
+                    </div>
+
+                    <!-- Menú de Navegación -->
+                    <div>
+                        <ul class="text-2xl flex" style="font-family: fantasy">
+                            <li class="static"><a class="px-2 hover:text-yellow-400 transition duration-800" key"Perfil" href="@Url.Action("Perfil", "Profesor")#perfil">Perfil</a></li>
+                            <li class="static"><a class="px-2 hover:text-yellow-400 transition duration-800" key"Materias" href="@Url.Action("Materias", "Profesor")#materias">Materias</a></li>
+                            @*<li class="relative group">
+                                <a class="px-2 hover:text-yellow-400 transition duration-800">Categoria</a>
+                                    <ul class="z-10 w-52 text-white absolute hidden group-hover:block list-none bg-black bg-opacity-50 p-2 rounded-lg">
+                                    
+                                        
+                                        @foreach (var item in model)
+                                        { 
+                                            <li class="hover:bg-black">
+                                                <a asp-controller="Categoria" asp-action="Index" asp-route-id="@item" class="block text-white py-2 ">@item</a>
+                                            </li>
+                                        }
+
+                                    
+                                    
+                                </ul>
+                            </li>*@
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-2xl flex items-center" style="font-family: fantasy">
+                    <ul class="flex space-x-8">
+                        
+                        <li class="transform hover:scale-125 transition duration-300"><a class="hover:text-red-400 transition duration-500" href="/Profesor/CerrarSesion">Cerrar Sesion</a></li>
+                    </ul>
+                </div>
+            </ul>
+        </nav>
+    </header>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+            
+
+    <!-- Pie de Página -->
+    <footer class="flex text-center py-4 fixed bottom-0 w-full text-white justify-between bg-slate-700">
+        <div>
+            &copy; 2023 - Honda - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+        <div class="flex top-0 right-0 top-0">
+            <a href="/Usuario/Index/" class="transition delay-150 duration-300 ease-in-out flex flex-col"><img alt="Icono" class="button-icon w-10 h-10" src="https://cdn-icons-png.flaticon.com/512/56/56763.png"></img></a>
+        </div>
+        
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

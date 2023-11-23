@@ -1,0 +1,33 @@
+﻿@model HomeCourse.Models.Profesor
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_LayoutProfesor";
+}
+<html>
+<head>
+    <title>Menú de Profesor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <div class="text-center p-8">
+        <div class="flex items-center justify-center space-x-4 mb-4">
+            <h2 class="font-century-gothic text-2xl">Bienvenido,</h2>
+            <h2 class="font-century-gothic text-2xl">@Model.Nombre</h2>
+            <h2 class="font-century-gothic text-2xl">(@Model.Id)</h2>
+        </div>
+
+        <div class="flex items-center justify-center space-x-4">
+            <a href="@Url.Action("Perfil")" class="text-blue-500 hover:underline">Perfil</a>
+            <a href="@Url.Action("Materias")" class="text-blue-500 hover:underline">Materias</a>
+        </div>
+
+        <div class="mt-4">
+            <a href="@Url.Action("CerrarSesion")" class="text-red-500 hover:underline">CERRAR SESION</a>
+        </div>
+    </div>
+</body>
+
+</html>

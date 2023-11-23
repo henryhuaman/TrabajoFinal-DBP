@@ -1,0 +1,43 @@
+﻿@model HomeCourse.Models.Administrador
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_LayoutAdmin";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Profesor</title>
+    <!-- Include Tailwind CSS -->
+    <link href="path/to/tailwind.css" rel="stylesheet">
+    <style>
+        /* You can add additional custom styles here if needed */
+        h2 {
+            font-family: 'Century Gothic', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans flex justify-center items-center min-h-screen">
+    <div class="text-center">
+        <div class="flex justify-center items-center flex-col">
+            <h2 class="font-bold text-3xl">Bienvenido,</h2>
+            <h2 class="font-bold text-3xl">@Model.Id</h2>
+        </div>
+        <div class="flex justify-center items-center mt-4">
+            <a href="@Url.Action("Registro_Profesores")" class="mx-4">Registro/Profesores</a>
+            <a href="@Url.Action("Registro_Usuarios")" class="mx-4">Registro/Usuarios</a>
+        </div>
+        <div class="mt-4">
+            <a href="@Url.Action("CerrarSesion")">CERRAR SESION</a>
+        </div>
+    </div>
+</body>
+
+</html>
+
+

@@ -1,0 +1,52 @@
+﻿@model HomeCourse.Models.Curso
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_LayoutProfesor";
+}
+<html>
+<body>
+    <form asp-action="Cambios_Materia" method="post" class="max-w-xs mx-auto mt-2">
+
+        <div class="mb-2">
+            <input asp-for="Id" type="hidden" id="Id" class="w-full py-1 px-2 border rounded focus:outline-none focus:border-blue-400" placeholder="Id">
+            <span asp-validation-for="Id" class="text-red-600"></span>
+        </div>
+
+        <div class="mb-2">
+            <input asp-for="ProfesorId" type="hidden" id="ProfesorId" class="w-full py-1 px-2 border rounded focus:outline-none focus:border-blue-400" placeholder="Profesor">
+            <span asp-validation-for="ProfesorId" class="text-red-600"></span>
+        </div>
+
+        <div class="mb-2">
+            <label for="Nombre" class="block text-gray-700 text-sm">Nombre:</label>
+            <input asp-for="Nombre" id="Nombre" class="w-full py-1 px-2 border rounded focus:outline-none focus:border-blue-400" placeholder="Nombres">
+            <span asp-validation-for="Nombre" class="text-red-600 text-xs"></span>
+        </div>
+
+        <div class="mb-2">
+            <label for="Descripcion" class="block text-gray-700 text-sm">Descripcion:</label>
+            <textarea asp-for="Descripcion" id="Descripcion" rows="2" class="w-full py-1 px-2 border rounded focus:outline-none focus:border-blue-400 resize-y text-sm" placeholder="Descripcion"></textarea>
+            <span asp-validation-for="Descripcion" class="text-red-600 text-xs"></span>
+        </div>
+
+        <div class="mb-2">
+            <label for="Categoria" class="block text-gray-700 text-sm">Categoria:</label>
+            <input asp-for="Categoria" id="Categoria" class="w-full py-1 px-2 border rounded focus:outline-none focus:border-blue-400" placeholder="Categoria">
+            <span asp-validation-for="Categoria" class="text-red-600 text-xs"></span>
+        </div>
+
+        <div class="mb-2">
+            <label for="Precio" class="block text-gray-700 text-sm">Precio:</label>
+            <input asp-for="Precio" id="Precio" class="w-full py-1 px-2 border rounded focus:outline-none focus:border-blue-400" placeholder="Precio">
+            <span asp-validation-for="Precio" class="text-red-600 text-xs"></span>
+        </div>
+
+        <div class="mb-2">
+            <button type="submit" class="w-full bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-700 focus:outline-none text-sm" name="edit" data-toggle="modal" data-target="#exampleModal">Grabar Cambios</button>
+        </div>
+    </form>
+</body>
+</html>
+

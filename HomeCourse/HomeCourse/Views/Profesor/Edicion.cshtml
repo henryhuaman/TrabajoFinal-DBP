@@ -1,0 +1,85 @@
+﻿@model HomeCourse.Models.Profesor
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_LayoutProfesor";
+}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .form-container {
+            max-width: 20rem; /* Adjust the maximum width as needed */
+            margin: auto;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .form-button {
+            background-color: #3490dc;
+            color: #fff;
+        }
+
+        .form-input {
+            height: 2rem; /* Adjust the height as needed */
+        }
+    </style>
+    <title>Styled Form</title>
+</head>
+<body class="bg-gray-100">
+    <div class="form-container bg-white p-3 shadow-md rounded-md my-4">
+        <form asp-action="Grabar" method="post">
+
+            <div class="mb-1">
+                <input asp-for="Id" type="hidden">
+            </div>
+
+            <div class="mb-1">
+                <label for="Nombre" class="form-label block text-gray-700">NOMBRES</label>
+                <input asp-for="Nombre" id="Nombre" class="form-input w-full py-1 px-2 border rounded focus:outline-none focus:border-blue-400" placeholder="Nombres">
+            </div>
+
+            <div class="mb-1">
+                <label for="Correo" class="form-label block text-gray-700">CORREO</label>
+                <input asp-for="Correo" id="Correo" class="form-input w-full py-1 px-2 border rounded focus:outline-none focus:border-blue-400" placeholder="Correo">
+            </div>
+
+            <div class="mb-1">
+                <label for="Dni" class="form-label block text-gray-700">DNI</label>
+                <input asp-for="Dni" id="Dni" class="form-input w-full py-1 px-2 border rounded focus:outline-none focus:border-blue-400" placeholder="DNI">
+            </div>
+
+            <div class="mb-1">
+                <label for="Telefono" class="form-label block text-gray-700">NUMERO DE TELEFONO</label>
+                <input asp-for="Telefono" id="Telefono" class="form-input w-full py-1 px-2 border rounded focus:outline-none focus:border-blue-400" placeholder="Telefono">
+            </div>
+
+            <div class="mb-1">
+                <label for="Descripcion" class="form-label block text-gray-700">INFORMACION</label>
+                <textarea asp-for="Descripcion" id="Descripcion" class="form-input w-full py-2 px-2 border rounded focus:outline-none focus:border-blue-400" placeholder="Detalles"></textarea>
+            </div>
+
+            <div class="mb-1">
+                <label for="Contraseña" class="form-label block text-gray-700">CONTRASENA</label>
+                <input asp-for="Contraseña" id="Contraseña" class="form-input w-full py-1 px-2 border rounded focus:outline-none focus:border-blue-400" placeholder="Contrasena">
+            </div>
+
+            <div class="mb-1">
+                <button type="submit" class="form-button w-full py-1 px-2 rounded hover:bg-blue-700 focus:outline-none" name="edit">
+                    Grabar Cambios <span class="text-lg ml-1">&#x1F39B;</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+

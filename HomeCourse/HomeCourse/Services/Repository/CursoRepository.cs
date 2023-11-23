@@ -62,6 +62,9 @@ namespace HomeCourse.Services.Repository
                 objModificado.Id = cursoConDatosModificados.Id;
                 objModificado.Nombre = cursoConDatosModificados.Nombre;
                 objModificado.Categoria = cursoConDatosModificados.Categoria;
+                objModificado.Descripcion = cursoConDatosModificados.Descripcion;
+                objModificado.ProfesorId = cursoConDatosModificados.ProfesorId;
+                objModificado.Precio = cursoConDatosModificados.Precio;
 
                 bd.SaveChanges();
             }

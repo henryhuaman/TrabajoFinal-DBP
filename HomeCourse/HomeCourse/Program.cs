@@ -10,6 +10,8 @@ builder.Services.Add(new ServiceDescriptor(typeof(IProfesor), new ProfesorReposi
 builder.Services.Add(new ServiceDescriptor(typeof(ICarritoDeCompras), new CarritoDeComprasRepository()));
 builder.Services.Add(new ServiceDescriptor(typeof(IUsuario), new UsuarioRepository()));
 builder.Services.Add(new ServiceDescriptor(typeof(IInscripcion), new InscripcionRepository()));
+builder.Services.Add(new ServiceDescriptor(typeof(IAdministrador), new AdministradorRepository()));
+builder.Services.Add(new ServiceDescriptor(typeof(IProfesor), new ProfesorRepository()));
 
 builder.Services.AddSession(options => {
     options.IdleTimeout = TimeSpan.FromSeconds(3600);
@@ -34,6 +36,6 @@ app.UseAuthorization();
 app.UseSession();
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Pagina}/{action=Index}/{id?}");
+    pattern: "{controller=Iniciar}/{action=InicioSesion}/{id?}");
 
 app.Run();

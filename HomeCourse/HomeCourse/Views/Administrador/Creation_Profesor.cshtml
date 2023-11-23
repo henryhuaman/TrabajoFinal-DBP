@@ -1,0 +1,67 @@
+﻿@model HomeCourse.Models.Profesor
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_LayoutAdmin";
+}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Tailwind Form</title>
+</head>
+
+<body class="flex items-center justify-center h-screen">
+
+    <form asp-controller="Administrador" asp-action="Grabar_Profesor" method="post"
+          class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div class="mb-4">
+            <label for="formGroupExampleInput2" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
+            <input asp-for="Nombre" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                   id="formGroupExampleInput2" placeholder="NOMBRE">
+            <span asp-validation-for="Nombre" class="text-red-500 text-xs italic"></span>
+        </div>
+        <div class="mb-4">
+            <label for="formGroupExampleInput2" class="block text-gray-700 text-sm font-bold mb-2">Telefono:</label>
+            <input asp-for="Telefono" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                   id="formGroupExampleInput2" placeholder="TELEFONO">
+            <span asp-validation-for="Telefono" class="text-red-500 text-xs italic"></span>
+        </div>
+        <div class="mb-4">
+            <label for="formGroupExampleInput2" class="block text-gray-700 text-sm font-bold mb-2">Correo:</label>
+            <input asp-for="Correo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                   id="formGroupExampleInput2" placeholder="CORREO">
+            <span asp-validation-for="Correo" class="text-red-500 text-xs italic"></span>
+        </div>
+        <div class="mb-4">
+            <label for="formGroupExampleInput2" class="block text-gray-700 text-sm font-bold mb-2">Contraseña:</label>
+            <input asp-for="Contraseña" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                   id="formGroupExampleInput2" placeholder="CONTRASEÑA">
+            <span asp-validation-for="Contraseña" class="text-red-500 text-xs italic"></span>
+        </div>
+        <div class="mb-4">
+            <label for="formGroupExampleInput2" class="block text-gray-700 text-sm font-bold mb-2">DNI:</label>
+            <input asp-for="Dni" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                   id="formGroupExampleInput2" placeholder="DNI">
+            <span asp-validation-for="Dni" class="text-red-500 text-xs italic"></span>
+        </div>
+        <div class="mb-4">
+            <label for="formGroupExampleInput2" class="block text-gray-700 text-sm font-bold mb-2">Informacion:</label>
+            <input asp-for="Descripcion" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                   id="formGroupExampleInput2" placeholder="DESCRIPCION">
+            <span asp-validation-for="Descripcion" class="text-red-500 text-xs italic"></span>
+        </div>
+        <div class="mb-6">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    value="btn" name="grabar">
+                Grabar
+            </button>
+        </div>
+    </form>
+
+</body>
+
+</html>

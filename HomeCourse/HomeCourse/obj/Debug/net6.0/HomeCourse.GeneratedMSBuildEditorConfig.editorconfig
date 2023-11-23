@@ -16,6 +16,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\henry\OneDrive\Escritorio\de la usil\3 ciclo\libroBasadoPlataformas\123\ELNUEVO\TrabajoFinal-DBP\HomeCourse\HomeCourse
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/henry/OneDrive/Escritorio/de la usil/3 ciclo/libroBasadoPlataformas/123/ELNUEVO/TrabajoFinal-DBP/HomeCourse/HomeCourse/Views/Administrador/Creation_Profesor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvclxDcmVhdGlvbl9Qcm9mZXNvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/henry/OneDrive/Escritorio/de la usil/3 ciclo/libroBasadoPlataformas/123/ELNUEVO/TrabajoFinal-DBP/HomeCourse/HomeCourse/Views/Administrador/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/henry/OneDrive/Escritorio/de la usil/3 ciclo/libroBasadoPlataformas/123/ELNUEVO/TrabajoFinal-DBP/HomeCourse/HomeCourse/Views/Administrador/Registro_Profesores.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvclxSZWdpc3Ryb19Qcm9mZXNvcmVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/henry/OneDrive/Escritorio/de la usil/3 ciclo/libroBasadoPlataformas/123/ELNUEVO/TrabajoFinal-DBP/HomeCourse/HomeCourse/Views/Administrador/Registro_Usuarios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvclxSZWdpc3Ryb19Vc3Vhcmlvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/henry/OneDrive/Escritorio/de la usil/3 ciclo/libroBasadoPlataformas/123/ELNUEVO/TrabajoFinal-DBP/HomeCourse/HomeCourse/Views/Carrito/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycml0b1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -48,8 +64,44 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnaW5hXE1vc3RyYXJQcm9mZXNvcmVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/henry/OneDrive/Escritorio/de la usil/3 ciclo/libroBasadoPlataformas/123/ELNUEVO/TrabajoFinal-DBP/HomeCourse/HomeCourse/Views/Profesor/Alumnos_Materia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3JcQWx1bW5vc19NYXRlcmlhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/henry/OneDrive/Escritorio/de la usil/3 ciclo/libroBasadoPlataformas/123/ELNUEVO/TrabajoFinal-DBP/HomeCourse/HomeCourse/Views/Profesor/Creation_Curso.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3JcQ3JlYXRpb25fQ3Vyc28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/henry/OneDrive/Escritorio/de la usil/3 ciclo/libroBasadoPlataformas/123/ELNUEVO/TrabajoFinal-DBP/HomeCourse/HomeCourse/Views/Profesor/Edicion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3JcRWRpY2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/henry/OneDrive/Escritorio/de la usil/3 ciclo/libroBasadoPlataformas/123/ELNUEVO/TrabajoFinal-DBP/HomeCourse/HomeCourse/Views/Profesor/Editar_Materia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3JcRWRpdGFyX01hdGVyaWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/henry/OneDrive/Escritorio/de la usil/3 ciclo/libroBasadoPlataformas/123/ELNUEVO/TrabajoFinal-DBP/HomeCourse/HomeCourse/Views/Profesor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3JcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/henry/OneDrive/Escritorio/de la usil/3 ciclo/libroBasadoPlataformas/123/ELNUEVO/TrabajoFinal-DBP/HomeCourse/HomeCourse/Views/Profesor/Materias.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3JcTWF0ZXJpYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/henry/OneDrive/Escritorio/de la usil/3 ciclo/libroBasadoPlataformas/123/ELNUEVO/TrabajoFinal-DBP/HomeCourse/HomeCourse/Views/Profesor/Perfil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3JcUGVyZmlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/henry/OneDrive/Escritorio/de la usil/3 ciclo/libroBasadoPlataformas/123/ELNUEVO/TrabajoFinal-DBP/HomeCourse/HomeCourse/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/henry/OneDrive/Escritorio/de la usil/3 ciclo/libroBasadoPlataformas/123/ELNUEVO/TrabajoFinal-DBP/HomeCourse/HomeCourse/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/henry/OneDrive/Escritorio/de la usil/3 ciclo/libroBasadoPlataformas/123/ELNUEVO/TrabajoFinal-DBP/HomeCourse/HomeCourse/Views/Shared/_LayoutProfesor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRQcm9mZXNvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/henry/OneDrive/Escritorio/de la usil/3 ciclo/libroBasadoPlataformas/123/ELNUEVO/TrabajoFinal-DBP/HomeCourse/HomeCourse/Views/Shared/_LayoutUser.cshtml]

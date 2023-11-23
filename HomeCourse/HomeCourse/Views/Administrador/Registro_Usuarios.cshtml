@@ -1,0 +1,39 @@
+﻿@model IEnumerable<HomeCourse.Models.Usuario>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_LayoutAdmin";
+}
+<html>
+<body class="bg-gray-100 font-sans">
+    <table class="w-full border border-collapse rounded-md overflow-hidden">
+        <thead class="bg-blue-500 text-white">
+            <tr>
+                <th scope="col" class="py-2 px-4 text-center">ID</th>
+                <th scope="col" class="py-2 px-4 text-center">Nombre</th>
+                <th scope="col" class="py-2 px-4 text-center">Correo</th>
+                <th scope="col" class="py-2 px-4 text-center">DNI</th>
+                <th scope="col" class="py-2 px-4"></th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="py-2 px-4 text-center">@item.Id</td>
+                    <td class="py-2 px-4 text-center">@item.Nombre</td>
+                    <td class="py-2 px-4 text-center">@item.Correo</td>
+                    <td class="py-2 px-4 text-center">@item.Dni</td>
+                    <td class="py-2 px-4 text-center">
+                        <a asp-action="Delete_Usuario" asp-route-id="@item.Id" class="text-red-500 hover:text-red-700 py-1 px-2 inline-block">-</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+

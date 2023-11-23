@@ -1,0 +1,70 @@
+﻿@model IEnumerable<HomeCourse.Models.Profesor>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_LayoutAdmin";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Profesores Registrados</title>
+</head>
+
+<body class="bg-gray-100 p-8">
+    <table class="w-full table-auto">
+        <thead class="bg-blue-500 text-white">
+            <tr>
+                <th scope="col" class="py-1 rounded-tl text-sm">ID</th>
+                <th scope="col" class="py-1 text-sm">DNI</th>
+                <th scope="col" class="py-1 text-sm">Nombre</th>
+                <th scope="col" class="py-1 text-sm">Telefono</th>
+                <th scope="col" class="py-1 text-sm">Correo</th>
+                <th scope="col" class="py-1 text-sm">Info.</th>
+                <th scope="col" class="py-1 rounded-tr"></th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="border px-2 py-1 text-sm">@item.Id</td>
+                    <td class="border px-2 py-1 text-sm">@item.Dni</td>
+                    <td class="border px-2 py-1 text-sm">@item.Nombre</td>
+                    <td class="border px-2 py-1 text-sm">@item.Telefono</td>
+                    <td class="border px-2 py-1 text-sm">@item.Correo</td>
+                    <td class="border px-2 py-1 text-sm">@item.Descripcion</td>
+                    <td class="border px-2 py-1 text-sm">
+                        <a asp-action="Delete_Profesor" asp-route-id="@item.Id">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                 stroke="currentColor" class="h-4 w-4 inline-block align-text-top">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                            ELIMINAR
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="mt-4 text-center">
+        <button type="button" class="text-blue-500">
+            <a asp-action="Creation_Profesor" class="mr-2">AÑADIR</a>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                 class="h-4 w-4 inline-block align-text-top">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+            </svg>
+        </button>
+    </div>
+</body>
+
+</html>
+
+
+

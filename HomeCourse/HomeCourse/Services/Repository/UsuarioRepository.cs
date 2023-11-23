@@ -6,6 +6,30 @@ namespace HomeCourse.Services.Repository
     public class UsuarioRepository : IUsuario
     {   
         private BdWeb bd = new BdWeb();
+
+        public void addNew(Usuario nuevo)
+        {
+            try
+            {
+                bd.Usuarios.Add(nuevo);
+                bd.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        public void deleteUsuarioDataById(string id)
+        {
+            var obj = (from tablaProfe in bd.Usuarios where tablaProfe.Id == id select tablaProfe).Single();
+            List<Inscripcion> inscriptoRemove = (from tablaInscrip in bd.Inscripcions where tablaInscrip.UsuarioId == obj.Id select tablaInscrip).ToList();
+            bd.Inscripcions.RemoveRange(inscriptoRemove);
+            bd.SaveChanges();
+            bd.Usuarios.Remove(obj);
+            bd.SaveChanges();
+        }
+
         public IEnumerable<Usuario> GetAllUsuarios()
         {
             return bd.Usuarios;
@@ -29,6 +53,16 @@ namespace HomeCourse.Services.Repository
         public Usuario getUsuariobyName(string name)
         {
             return bd.Usuarios.Single(client => client.Nombre == name);
+        }
+
+        public IEnumerable<Usuario> getUsuariosbyCurso(string id)
+        {
+            var inscritos = (from inscripcion in bd.Inscripcions
+                             where inscripcion.CursoId == id
+                             join usuario in bd.Usuarios on inscripcion.UsuarioId equals usuario.Id
+                             select usuario).ToList();
+
+            return inscritos;
         }
 
         public bool passwordMatchvyEmail(string correo, string password)

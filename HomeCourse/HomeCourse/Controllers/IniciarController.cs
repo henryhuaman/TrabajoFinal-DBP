@@ -8,11 +8,13 @@ namespace HomeCourse.Controllers
     {
         private readonly IProfesor Profe;
         private readonly IUsuario client;
+        private readonly IAdministrador admin;
 
-        public IniciarController(IProfesor pro, IUsuario cle)
+        public IniciarController(IProfesor pro, IUsuario cle, IAdministrador ad)
         {
             this.Profe = pro;
             this.client = cle;
+            this.admin = ad;
         }
         public IActionResult Index()
         {
@@ -47,6 +49,18 @@ namespace HomeCourse.Controllers
                 {
                     HttpContext.Session.SetString("UsuarioId", client.getUsuariobyCorreo(email).Id);
                     return RedirectToAction("Index", "Usuario");
+                }
+                else
+                {
+                    return RedirectToAction("InicioSesion", "Iniciar");
+                }
+            }
+            else if (admin.AdministradorExistsbyCorreo(email))
+            {
+                if (admin.passwordMatchvyEmail(email,password))
+                {
+                    HttpContext.Session.SetString("AdminId", admin.getAdministradorbyCorreo(email).Id);
+                    return RedirectToAction("Index","Administrador");
                 }
                 else
                 {

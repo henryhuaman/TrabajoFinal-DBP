@@ -5,7 +5,6 @@ namespace HomeCourse.Services.Interface
     public interface IInscripcion
     {
         IEnumerable<Inscripcion> GetAllInscripciones();
-
         void Delete(String id);
         void Add(Inscripcion listinsc);
         Inscripcion GetInscripcion(string id, string idUsu);

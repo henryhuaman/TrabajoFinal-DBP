@@ -1,0 +1,38 @@
+﻿@model IEnumerable<HomeCourse.Models.Usuario>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_LayoutProfesor";
+}
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="max-w-3xl mx-auto mt-8">
+        <h2 class="text-2xl font-semibold mb-4">Alumnos inscritos:</h2>
+        <table class="min-w-full">
+            <thead>
+                <tr class="bg-blue-500 text-white">
+                    <th class="py-2 px-4 text-center">ID</th>
+                    <th class="py-2 px-4 text-center">Nombre</th>
+                    <th class="py-2 px-4 text-center">Correo</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                @foreach (var item in Model)
+                {
+                    <tr class="text-center">
+                        <td class="py-2 px-4">@item.Id</td>
+                        <td class="py-2 px-4">@item.Nombre</td>
+                        <td class="py-2 px-4">@item.Correo</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+

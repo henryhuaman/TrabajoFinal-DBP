@@ -1,0 +1,48 @@
+﻿@model IEnumerable<HomeCourse.Models.Curso>;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_LayoutProfesor";
+}
+<body class="bg-gray-100">
+    <div class="container mx-auto p-8">
+        <h2 class="text-3xl font-semibold mb-4">Materias Activas:</h2>
+        <table class="w-full border rounded-lg">
+            <thead class="bg-blue-500 text-white">
+                <tr>
+                    <th class="py-2 px-4 rounded-tl-lg">ID</th>
+                    <th class="py-2 px-4">Nombre</th>
+                    <th class="py-2 px-4">Descripcion</th>
+                    <th class="py-2 px-4">Categoría</th>
+                    <th class="py-2 px-4">Precio</th>
+                    <th class="py-2 px-4"></th>
+                    <th class="py-2 px-4"></th>
+                    <th class="py-2 px-4 rounded-tr-lg"></th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                @foreach (var item in Model)
+                {
+                    <tr class="text-center whitespace-no-wrap">
+                        <td class="py-2 px-4">@item.Id</td>
+                        <td class="py-2 px-4">@item.Nombre</td>
+                        <td class="py-2 px-4">@item.Descripcion</td>
+                        <td class="py-2 px-4">@item.Categoria</td>
+                        <td class="py-2 px-4">@item.Precio</td>
+                        <td class="py-2 px-4"><a href="@Url.Action("Alumnos_Materia", new { id = item.Id })" class="text-blue-500">ALUMNOS</a></td>
+                        <td class="py-2 px-4"><a href="@Url.Action("Editar_Materia", new { id = item.Id })" class="text-blue-500">EDITAR</a></td>
+                        <td class="py-2 px-4 rounded-br-lg"><a href="@Url.Action("Eliminar_Materia", new { id = item.Id })" class="text-red-500">ELIMINAR</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="flex justify-center mt-4">
+            <a asp-action="Creation_Curso" class="bg-blue-500 text-white py-2 px-4 rounded-full flex items-center">
+                CREAR <span class="ml-2">+</span>
+            </a>
+        </div>
+    </div>
+</body>
+
+
